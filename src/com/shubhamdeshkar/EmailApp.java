@@ -8,6 +8,7 @@ public class EmailApp {
     private String lastName;
     private String password;
     private int storageCapacity;
+    private int defaultPasswordLength = 8;
     private String department;
     private String altenateEmail;
 
@@ -16,8 +17,14 @@ public class EmailApp {
         this.firstName = firstName;
         this.lastName = lastName;
         System.out.println("EMAIL INITIALIZED FOR: " + this.firstName + " " + this.lastName);
+
+        // Call a method asking for department
         this.department = setDepartment();
         System.out.println("DEPARTMENT INITIALIZED: " + this.department);
+
+        // Call a method generating random password
+        this.password = randomPassword(defaultPasswordLength);
+        System.out.println("YOUR PASSWORD IS: " + this.password);
     }
 
     // Ask for department
@@ -43,7 +50,7 @@ public class EmailApp {
         String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%-";
         char[] password = new char[length];
         for(int i = 0; i < length; i++){
-            int rand = (int) Math.random() * passwordSet.length();
+            int rand = (int) (Math.random() * passwordSet.length());
             password[i] = passwordSet.charAt(rand);
         }
         return new String(password);
