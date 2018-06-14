@@ -7,6 +7,7 @@ public class EmailApp {
     private String firstName;
     private String lastName;
     private String password;
+    private String email;
     private int storageCapacity;
     private int defaultPasswordLength = 8;
     private String department;
@@ -25,6 +26,11 @@ public class EmailApp {
         // Call a method generating random password
         this.password = randomPassword(defaultPasswordLength);
         System.out.println("YOUR PASSWORD IS: " + this.password);
+
+        // Combine elements to generate email
+        this.email = this.firstName.toLowerCase() + '.' + this.lastName.toLowerCase() + '@' + this.department.toLowerCase()
+                + ".company.com";
+        System.out.println("EMAIL: " + this.email);
     }
 
     // Ask for department
