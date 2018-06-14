@@ -11,7 +11,7 @@ public class EmailApp {
     private int storageCapacity;
     private int defaultPasswordLength = 8;
     private String department;
-    private String altenateEmail;
+    private String alternateEmail;
 
     // Constructor
     public EmailApp(String firstName, String lastName) {
@@ -63,8 +63,19 @@ public class EmailApp {
     }
 
     // Set the mailbox storageCapacity
+    public void setStorageCapacity(int storageCapacity) {
+        this.storageCapacity = storageCapacity;
+    }
+
 
     // Set alternateEmail
+    public void setAlternateEmail(String alternateEmail) {
+        this.alternateEmail = alternateEmail;
+    }
+
 
     // Change password
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
