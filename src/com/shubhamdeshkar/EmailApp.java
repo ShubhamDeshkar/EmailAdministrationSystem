@@ -78,4 +78,17 @@ public class EmailApp {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    // Getters
+    public int getStorageCapacity() {
+        return storageCapacity;
+    }
+
+    public int getDefaultPasswordLength() {
+        return defaultPasswordLength;
+    }
+
+    public String getAlternateEmail() {
+        return alternateEmail;
+    }
 }
