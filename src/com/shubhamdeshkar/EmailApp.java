@@ -17,20 +17,16 @@ public class EmailApp {
     public EmailApp(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("EMAIL INITIALIZED FOR: " + this.firstName + " " + this.lastName);
 
         // Call a method asking for department
         this.department = setDepartment();
-        System.out.println("DEPARTMENT INITIALIZED: " + this.department);
 
         // Call a method generating random password
         this.password = randomPassword(defaultPasswordLength);
-        System.out.println("YOUR PASSWORD IS: " + this.password);
 
         // Combine elements to generate email
         this.email = this.firstName.toLowerCase() + '.' + this.lastName.toLowerCase() + '@' + this.department.toLowerCase()
                 + ".company.com";
-        System.out.println("EMAIL: " + this.email);
     }
 
     // Ask for department
@@ -90,5 +86,15 @@ public class EmailApp {
 
     public String getAlternateEmail() {
         return alternateEmail;
+    }
+
+    public void showInfo(){
+        String information =  "NAME: " + this.firstName + '\n'
+                            + "SURNAME: " + this.lastName + '\n'
+                            + "DEPARTMENT: " + this.department + '\n'
+                            + "EMAIL: " + this.email + '\n'
+                            + "PASSWORD: " + this.password + '\n'
+                            + "DEFAULT CAPACITY: " + this.storageCapacity + "MB";
+        System.out.println(information);
     }
 }
