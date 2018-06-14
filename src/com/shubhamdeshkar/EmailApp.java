@@ -25,7 +25,16 @@ public class EmailApp {
         System.out.println("1 for Sales\n2 for Development\n3 for Accounting");
 
         Scanner scanner = new Scanner(System.in);
-        
+        int choice = scanner.nextInt();
+        switch (choice){
+            case 1: return "Sales";
+
+            case 2: return "Development";
+
+            case 3: return "Accounting";
+
+            default: return "None";
+        }
     }
 
     // Generate a random Password
