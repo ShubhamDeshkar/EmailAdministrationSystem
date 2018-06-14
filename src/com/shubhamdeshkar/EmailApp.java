@@ -17,6 +17,7 @@ public class EmailApp {
         this.lastName = lastName;
         System.out.println("EMAIL INITIALIZED FOR: " + this.firstName + " " + this.lastName);
         this.department = setDepartment();
+        System.out.println("DEPARTMENT INITIALIZED: " + this.department);
     }
 
     // Ask for department
